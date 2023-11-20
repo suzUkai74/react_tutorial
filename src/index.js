@@ -1,17 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Clock from './components/clock'
+import Calculator from './components/calculator';
+import Counter from './components/counter';
+import SignUpDialog from './components/sign_up_dialog'
+import Game from './components/game';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const game = ReactDOM.createRoot(document.getElementById("game"));
+const clock = ReactDOM.createRoot(document.getElementById("clock"));
+const calculator = ReactDOM.createRoot(document.getElementById("calculator"));
+const counter = ReactDOM.createRoot(document.getElementById("counter"));
+const signUpDialog = ReactDOM.createRoot(document.getElementById("signUpDialog"));
+game.render(<Game />);
+clock.render(<Clock />);
+calculator.render(<Calculator />);
+counter.render(<Counter />);
+signUpDialog.render(<SignUpDialog />);
